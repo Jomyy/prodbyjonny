@@ -1,3 +1,6 @@
+<svelte:head>
+    <title>Releases</title>
+</svelte:head>
 <script>
 // @ts-nocheck
 
