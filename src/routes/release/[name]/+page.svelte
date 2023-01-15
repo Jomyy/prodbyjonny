@@ -1,3 +1,4 @@
+
 <script>
 
      /** @type {import('./$types').PageData} */
@@ -6,6 +7,7 @@
 </script>
 <svelte:head>
     <meta property="og-title" content={data.post.releaseData.name}/>
+    <title>{data.post.releaseData.name}</title>
 </svelte:head>
 
 <img src={ data.post.imageUrl} id="background" alt="Background">
