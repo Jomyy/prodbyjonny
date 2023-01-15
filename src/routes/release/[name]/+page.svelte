@@ -4,6 +4,10 @@
    export let data;
  
 </script>
+<svelte:head>
+    <meta property="og-title" content={data.post.releaseData.name}/>
+</svelte:head>
+
 <img src={ data.post.imageUrl} id="background" alt="Background">
 <div id="container">
    <div id="releaseData">
