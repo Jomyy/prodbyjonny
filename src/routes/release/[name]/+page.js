@@ -6,7 +6,7 @@ import { page } from '$app/stores'
 export async function load({ params }) {
     
    
-    const pb = new PocketBase('http://192.168.0.172:8090');
+    const pb = new PocketBase('https://red-processor.pockethost.io');
     const record = await pb.collection('releases').getFirstListItem('camelcaseName=' + '"' + params.name +'"' , {})
    
    
