@@ -4,17 +4,6 @@
 <img src="TheAftermathIcon.webp" alt="banner" id="banner" />
 <div class="impressum">
 	<section>
-		<h1>Impressum</h1>
-		<p>Angaben gemäß § 5 TMG</p>
-		<p>
-			Jonathan Enking <br />
-			Amelsbürener Straße 19<br />
-			48165 Münster <br />
-		</p>
-		<p>
-			<strong>Vertreten durch: </strong><br />
-			Jonathan Enking<br />
-		</p>
 		<p>
 			<strong>Kontakt:</strong> <br />
 			Telefon: 0176-16811564<br />
@@ -35,7 +24,7 @@
 	}
 	.impressum {
 		width: 100vw;
-		height: calc(100vh - 110px);
+
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
