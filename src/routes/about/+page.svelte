@@ -38,6 +38,7 @@
 		align-items: center;
 		color: #f3f3f3;
 		font-family: PoppinsLight;
+		font-display: swap;
 		text-align: start;
 	}
 </style>

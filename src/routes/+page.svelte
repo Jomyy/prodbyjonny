@@ -22,6 +22,7 @@
 	}
 	section {
 		font-family: PoppinsLight;
+		font-display: swap;
 		color: #f3f3f3;
 		width: 30vw;
 		text-align: center;
