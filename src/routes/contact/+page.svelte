@@ -1,10 +1,10 @@
 <svelte:head>
-    <title>Contact Me</title>
+	<title>Contact Me</title>
 </svelte:head>
-<img src="TheAftermathIcon.jpeg" alt="banner" id="banner">
+<img src="TheAftermathIcon.webp" alt="banner" id="banner" />
 
 <style>
-    #banner{
-        width: 100vw;
-    }
+	#banner {
+		width: 100vw;
+	}
 </style>
