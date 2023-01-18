@@ -5,21 +5,15 @@
 	export let data;
 </script>
 
-<head>
-	<link
-		rel="stylesheet"
-		href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,500,0,0"
-	/>
-</head>
+<head />
 <div id="container">
 	<a href={'/release/' + data.camelcaseName}
 		><div class="overlay">
-			<img src="linkIcon.svg" />
-			<span class="material-symbols-outlined"> link </span>
+			<img src="linkIcon.svg" alt="icon" id="icon" />
 		</div>
 	</a>
 
-	<img src={data.imageUrl} alt="cover" />
+	<img src={data.imageUrl} alt="cover" id="cover" />
 </div>
 
 <style>
@@ -38,19 +32,18 @@
 	#container:hover .overlay {
 		opacity: 1;
 	}
-	#container:hover img {
+	#container:hover #cover {
 		filter: brightness(0.5);
 	}
-
-	img {
+	#cover {
 		transition: filter 0.5s;
 		width: 100%;
 	}
 
-	span {
+	#icon {
 		color: white;
 		font-size: 80px;
-
+		fill: white;
 		position: absolute;
 		top: 50%;
 		left: 50%;

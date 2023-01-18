@@ -69,10 +69,12 @@
 	@font-face {
 		font-family: 'Poppins';
 		src: url('/fonts/PoppinsSemiBold.ttf') format('truetype');
+		font-display: swap;
 	}
 	@font-face {
 		font-family: 'PoppinsLight';
 		src: url('/fonts/PoppinsLight.ttf') format('truetype');
+		font-display: swap;
 	}
 	#links {
 		width: 100%;
