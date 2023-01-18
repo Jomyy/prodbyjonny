@@ -66,11 +66,7 @@
 		align-items: center;
 		margin-left: 30px;
 	}
-	@font-face {
-		font-family: 'Poppins';
-		src: url('/fonts/PoppinsSemiBold.ttf') format('truetype');
-		font-display: swap;
-	}
+
 	@font-face {
 		font-family: 'PoppinsLight';
 		src: url('/fonts/PoppinsLight.ttf') format('truetype');
@@ -141,7 +137,7 @@
 		margin-left: 20px;
 		font-size: 40px;
 		line-height: normal;
-		font-family: Poppins;
+		font-family: PoppinsLight;
 		font-display: swap;
 		text-shadow: 3px 3px 4px rgba(0, 0, 0, 0.173);
 	}
