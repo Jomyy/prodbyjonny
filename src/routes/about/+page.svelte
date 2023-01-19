@@ -17,7 +17,7 @@
 		<p>
 			<strong>Kontakt:</strong> <br />
 			Telefon: 0176-16811564<br />
-			E-Mail: <a href="mailto:joniamhandy@gmail.com">joniamhandy@gmail.com</a>
+			E-Mail: <a href="mailto:contact@prodbyjonny.de">contact@prodbyjonny.de</a>
 			<br />
 		</p>
 		<br />
