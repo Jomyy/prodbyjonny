@@ -23,6 +23,10 @@
 		aspect-ratio: 1/1;
 		object-fit: cover;
 		margin: 0px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
 	}
 	.overlay {
 		position: absolute;

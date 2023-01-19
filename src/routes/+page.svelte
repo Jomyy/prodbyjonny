@@ -1,26 +1,10 @@
 <script>
-	/**
-	 * @type {any}
-	 */
-	let scrollPositionY;
-	/**
-	 * @type {number}
-	 */
-	let scrollPercentageY;
-	/**
-	 * @type {any}
-	 */
-	let clientHeightY;
-	$: {
-		scrollPercentageY = (scrollPositionY / clientHeightY) * 100;
-		console.log(scrollPercentageY);
-	}
 </script>
 
 <svelte:head>
 	<title>Home</title>
 </svelte:head>
-<svelte:window bind:scrollY={scrollPositionY} bind:innerHeight={clientHeightY} />
+
 <img src="portrait.webp" alt="back" id="background" />
 <main>
 	<div id="left">

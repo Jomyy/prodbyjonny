@@ -55,8 +55,8 @@
 		width: 100vw;
 		height: 40px;
 		background-color: #1e1e1e77;
-		backdrop-filter: blur(40px);
-		-webkit-backdrop-filter: blur(40px);
+		backdrop-filter: blur(40px) brightness(0.7);
+		-webkit-backdrop-filter: blur(40px) brightness(0.7);
 		position: fixed;
 		bottom: 0px;
 		display: flex;
@@ -95,8 +95,8 @@
 		width: 100vw;
 		height: 70px;
 		background-color: #1e1e1e77;
-		backdrop-filter: blur(40px);
-		-webkit-backdrop-filter: blur(40px);
+		backdrop-filter: blur(40px) brightness(0.7);
+		-webkit-backdrop-filter: blur(40px) brightness(0.7);
 		list-style: none;
 		z-index: 100;
 	}
