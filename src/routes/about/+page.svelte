@@ -1,6 +1,7 @@
 <svelte:head>
 	<title>About This Site</title>
 </svelte:head>
+<img src="TheAftermathIcon.webp" alt="back" id="background" />
 <div class="impressum">
 	<section>
 		<h1>About this site</h1>
@@ -25,6 +26,21 @@
 </div>
 
 <style>
+	a {
+		color: #f3f3f3;
+	}
+	#background {
+		width: 100vw;
+		height: 100vh;
+		object-fit: cover;
+		position: fixed;
+		left: -10vw;
+
+		z-index: -2;
+		top: 0px;
+		filter: blur(100px) brightness(0.5);
+		transform: scale(1);
+	}
 	@font-face {
 		font-family: 'PoppinsLight';
 		src: url('/fonts/PoppinsLight.ttf') format('truetype');
