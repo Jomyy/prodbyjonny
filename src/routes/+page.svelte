@@ -38,16 +38,13 @@
 			<a href="https://open.spotify.com/artist/6sP4WzEXeQ8vifuUgr3tZu?si=m-xXvsUYRb-vp7gCRw2T_g">
 				<img src="SpotifyIcon.png" alt="spotify" class="icon" />
 			</a>
-			<a href="https://open.spotify.com/artist/6sP4WzEXeQ8vifuUgr3tZu?si=m-xXvsUYRb-vp7gCRw2T_g">
+			<a href="https://music.youtube.com/channel/UCkxj6IUOxepqs6tOEYAIvBg?feature=share">
 				<img src="YoutubeMusicIcon.png" alt="spotify" class="icon" />
 			</a>
-			<a href="https://open.spotify.com/artist/6sP4WzEXeQ8vifuUgr3tZu?si=m-xXvsUYRb-vp7gCRw2T_g">
+			<a href="https://music.apple.com/de/artist/jonny/1643013637">
 				<img src="AppleMusicIcon.png" alt="spotify" class="icon" />
 			</a>
-			<a href="https://open.spotify.com/artist/6sP4WzEXeQ8vifuUgr3tZu?si=m-xXvsUYRb-vp7gCRw2T_g">
-				<img src="DeezerIcon.png" alt="spotify" class="icon" />
-			</a>
-			<a href="https://open.spotify.com/artist/6sP4WzEXeQ8vifuUgr3tZu?si=m-xXvsUYRb-vp7gCRw2T_g">
+			<a href="https://youtube.com/@prodbyjonny">
 				<img src="YoutubeIcon.png" alt="spotify" class="icon" />
 			</a>
 		</div>
