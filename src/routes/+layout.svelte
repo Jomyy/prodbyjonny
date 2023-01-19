@@ -62,7 +62,7 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		z-index: 10000;
+		z-index: 10;
 	}
 	footer a {
 		font-family: PoppinsLight;
@@ -97,8 +97,9 @@
 		background-color: #1e1e1e77;
 		backdrop-filter: blur(40px) brightness(0.7);
 		-webkit-backdrop-filter: blur(40px) brightness(0.7);
+
 		list-style: none;
-		z-index: 100;
+		z-index: 10;
 	}
 	li {
 		height: 100%;
