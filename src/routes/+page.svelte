@@ -86,6 +86,11 @@
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
+		-webkit-animation: fadein 1s; /* Safari, Chrome and Opera > 12.1 */
+		-moz-animation: fadein 1s; /* Firefox < 16 */
+		-ms-animation: fadein 1s; /* Internet Explorer */
+		-o-animation: fadein 1s; /* Opera < 12.1 */
+		animation: fadein 1s;
 	}
 	section {
 		font-family: PoppinsLight;
@@ -93,6 +98,11 @@
 		color: #f3f3f3;
 		width: 30vw;
 		text-align: center;
+		-webkit-animation: fadein 1s; /* Safari, Chrome and Opera > 12.1 */
+		-moz-animation: fadein 1s; /* Firefox < 16 */
+		-ms-animation: fadein 1s; /* Internet Explorer */
+		-o-animation: fadein 1s; /* Opera < 12.1 */
+		animation: fadein 1s;
 	}
 	#portrait {
 		max-width: 30vw;
@@ -101,6 +111,11 @@
 		z-index: 2;
 		border-radius: 10px;
 		box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.321);
+		-webkit-animation: fadein 1s; /* Safari, Chrome and Opera > 12.1 */
+		-moz-animation: fadein 1s; /* Firefox < 16 */
+		-ms-animation: fadein 1s; /* Internet Explorer */
+		-o-animation: fadein 1s; /* Opera < 12.1 */
+		animation: fadein 1s;
 	}
 
 	main {
@@ -137,6 +152,64 @@
 			width: auto;
 			margin-top: 0px;
 			margin: 0px;
+		}
+	}
+	@keyframes fadein {
+		from {
+			opacity: 0;
+			transform: translateY(-10px);
+		}
+		to {
+			opacity: 1;
+			transform: translateY(0px);
+		}
+	}
+
+	/* Firefox < 16 */
+	@-moz-keyframes fadein {
+		from {
+			opacity: 0;
+			transform: translateY(-10px);
+		}
+		to {
+			opacity: 1;
+			transform: translateY(0px);
+		}
+	}
+
+	/* Safari, Chrome and Opera > 12.1 */
+	@-webkit-keyframes fadein {
+		from {
+			opacity: 0;
+			transform: translateY(-10px);
+		}
+		to {
+			opacity: 1;
+			transform: translateY(0px);
+		}
+	}
+
+	/* Internet Explorer */
+	@-ms-keyframes fadein {
+		from {
+			opacity: 0;
+			transform: translateY(-10px);
+		}
+		to {
+			opacity: 1;
+			transform: translateY(0px);
+		}
+	}
+
+	/* Opera < 12.1 */
+	@-o-keyframes fadein {
+		from {
+			opacity: 0;
+			transform: translateY(-10px);
+		}
+		to {
+			opacity: 1;
+			transform: translateY(0px);
 		}
 	}
 </style>
