@@ -17,6 +17,13 @@
 </div>
 
 <style>
+	#container {
+		width: fit-content;
+		height: fit-content;
+		aspect-ratio: 1/1;
+		object-fit: cover;
+		margin: 0px;
+	}
 	.overlay {
 		position: absolute;
 		top: 0;
@@ -28,6 +35,8 @@
 		opacity: 0;
 		transition: opacity 0.3s;
 		z-index: 10;
+
+		margin: 0px;
 	}
 	#container:hover .overlay {
 		opacity: 1;
@@ -54,5 +63,7 @@
 	div {
 		position: relative;
 		width: 100%;
+		aspect-ratio: 1/1;
+		margin: 0px;
 	}
 </style>

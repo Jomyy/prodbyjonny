@@ -3,7 +3,7 @@
 </svelte:head>
 <div class="impressum">
 	<section>
-		<h1>Impressum</h1>
+		<h1>About this site</h1>
 		<p>Angaben gemäß § 5 TMG</p>
 		<p>
 			Jonathan Enking <br />
@@ -11,12 +11,12 @@
 			48165 Münster <br />
 		</p>
 		<p>
-			<strong>Vertreten durch: </strong><br />
+			<strong>Represented by: </strong><br />
 			Jonathan Enking<br />
 		</p>
 		<p>
-			<strong>Kontakt:</strong> <br />
-			Telefon: 0176-16811564<br />
+			<strong>Contact:</strong> <br />
+			Tel: 0176-16811564<br />
 			E-Mail: <a href="mailto:contact@prodbyjonny.de">contact@prodbyjonny.de</a>
 			<br />
 		</p>

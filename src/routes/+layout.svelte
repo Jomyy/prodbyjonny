@@ -39,7 +39,7 @@
 	<slot />
 </main>
 <footer>
-	<a href="/about">Impressum</a>
+	<a href="/about">About This Site</a>
 </footer>
 
 <style>
@@ -54,12 +54,15 @@
 	footer {
 		width: 100vw;
 		height: 40px;
-		background-color: #1e1e1e;
+		background-color: #1e1e1e77;
+		backdrop-filter: blur(40px);
+		-webkit-backdrop-filter: blur(40px);
 		position: fixed;
 		bottom: 0px;
 		display: flex;
 		justify-content: center;
 		align-items: center;
+		z-index: 10000;
 	}
 	footer a {
 		font-family: PoppinsLight;
@@ -74,7 +77,13 @@
 		text-decoration: underline;
 	}
 	li[aria-current='page'] {
-		background-color: darkslateblue;
+		background-color: rgba(83, 65, 201, 0.724);
+	}
+	li {
+		transition: background-color 100ms ease-in-out;
+	}
+	li:hover:not([aria-current='page']) {
+		background-color: rgba(83, 65, 201, 0.173);
 	}
 	main {
 		margin-top: 70px;
@@ -85,7 +94,9 @@
 		top: 0px;
 		width: 100vw;
 		height: 70px;
-		background-color: #1e1e1e;
+		background-color: #1e1e1e77;
+		backdrop-filter: blur(40px);
+		-webkit-backdrop-filter: blur(40px);
 		list-style: none;
 		z-index: 100;
 	}
