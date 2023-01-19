@@ -6,6 +6,7 @@
 	export let data;
 </script>
 
+<img src="portrait.webp" alt="back" id="background" />
 <svelte:head>
 	<title>Releases</title>
 </svelte:head>
@@ -16,6 +17,18 @@
 </div>
 
 <style>
+	#background {
+		width: 100vw;
+		height: 100vh;
+		object-fit: cover;
+		position: fixed;
+		left: -10vw;
+
+		z-index: -2;
+		top: 0px;
+		filter: blur(100px) brightness(0.5);
+		transform: scale(1);
+	}
 	div {
 		display: grid;
 		grid-template-columns: 1fr 1fr 1fr 1fr 1fr;

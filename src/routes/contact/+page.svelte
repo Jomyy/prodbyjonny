@@ -1,6 +1,7 @@
 <svelte:head>
 	<title>Contact Me</title>
 </svelte:head>
+<img src="TheAftermathIcon.webp" alt="back" id="background" />
 <img src="TheAftermathIcon.webp" alt="banner" id="banner" />
 <div class="impressum">
 	<section>
@@ -15,6 +16,21 @@
 </div>
 
 <style>
+	a {
+		color: #f3f3f3;
+	}
+	#background {
+		width: 100vw;
+		height: 100vh;
+		object-fit: cover;
+		position: fixed;
+		left: -10vw;
+
+		z-index: -2;
+		top: 0px;
+		filter: blur(100px) brightness(0.2);
+		transform: scale(1);
+	}
 	#banner {
 		width: 100vw;
 	}
