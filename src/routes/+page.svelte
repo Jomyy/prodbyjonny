@@ -5,10 +5,10 @@
 	<title>Home</title>
 </svelte:head>
 
-<img src="portrait.webp" alt="back" id="background" />
+<img src="portrait.webp" alt="back" id="background" draggable="false" />
 <main>
 	<div id="left">
-		<img src="portrait.webp" alt="Portrtait" id="portrait" />
+		<img src="portrait.webp" alt="Portrtait" id="portrait" draggable="false" />
 	</div>
 
 	<div id="right">
@@ -19,17 +19,23 @@
 			His first single was released in early 2022 and he has released numerous singles since then.
 		</section>
 		<div id="links">
-			<a href="https://open.spotify.com/artist/6sP4WzEXeQ8vifuUgr3tZu?si=m-xXvsUYRb-vp7gCRw2T_g">
-				<img src="SpotifyIcon.png" alt="spotify" class="icon" />
+			<a
+				href="https://open.spotify.com/artist/6sP4WzEXeQ8vifuUgr3tZu?si=m-xXvsUYRb-vp7gCRw2T_g"
+				draggable="false"
+			>
+				<img src="SpotifyLogoHR.webp" alt="spotify" class="icon" draggable="false" />
 			</a>
-			<a href="https://music.youtube.com/channel/UCkxj6IUOxepqs6tOEYAIvBg?feature=share">
-				<img src="YoutubeMusicIcon.png" alt="spotify" class="icon" />
+			<a
+				href="https://music.youtube.com/channel/UCkxj6IUOxepqs6tOEYAIvBg?feature=share"
+				draggable="false"
+			>
+				<img src="YTMusicLogoHr.webp" alt="spotify" class="icon" draggable="false" />
 			</a>
-			<a href="https://music.apple.com/de/artist/jonny/1643013637">
-				<img src="AppleMusicIcon.png" alt="spotify" class="icon" />
+			<a href="https://music.apple.com/de/artist/jonny/1643013637" draggable="false">
+				<img src="AppleMusicLogoHR.webp" alt="spotify" class="icon" draggable="false" />
 			</a>
-			<a href="https://youtube.com/@prodbyjonny">
-				<img src="YoutubeIcon.png" alt="spotify" class="icon" />
+			<a href="https://youtube.com/@prodbyjonny" draggable="false">
+				<img src="YoutubeLogoHR.webp" alt="spotify" class="icon" draggable="false" />
 			</a>
 		</div>
 	</div>
@@ -57,8 +63,12 @@
 
 		z-index: -2;
 		top: 0px;
-		filter: blur(100px) brightness(0.5);
+		filter: blur(120px) brightness(0.5);
 		transform: scale(1);
+		animation: infinite 100s warble ease-in-out;
+		-webkit-animation: infinite 100s warble ease-in-out;
+		-moz-animation: infinite 100s warble ease-in-out;
+		-o-animation: infinite 100s warble ease-in-out;
 	}
 	#right {
 		display: flex;
@@ -79,8 +89,14 @@
 	#links a {
 		margin-left: 10px;
 		margin-right: 10px;
+		user-select: none;
 	}
+	#links a img {
+		user-select: none;
+	}
+
 	#links {
+		user-select: none;
 		margin-top: 40px;
 		margin-bottom: 40px;
 		display: flex;
@@ -91,6 +107,12 @@
 		-ms-animation: fadein 1s; /* Internet Explorer */
 		-o-animation: fadein 1s; /* Opera < 12.1 */
 		animation: fadein 1s;
+		background-color: #0f0f0d53;
+		padding: 15px;
+		border-radius: 15px;
+		border-width: 0.5px;
+		border-color: #1d1b19;
+		border-style: solid;
 	}
 	section {
 		font-family: PoppinsLight;
@@ -152,6 +174,86 @@
 			width: auto;
 			margin-top: 0px;
 			margin: 0px;
+		}
+	}
+	@keyframes warble {
+		0% {
+			transform: translateY(0px) translateX(0px) scale(1);
+		}
+		25% {
+			transform: translateY(210px) translateX(-240px) scale(1.3);
+		}
+		35% {
+			transform: translateX(10px);
+		}
+		50% {
+			transform: translateY(-150px) scale(0.4);
+		}
+		75% {
+			transform: translateY(310px) translateX(400px) scale(1.9);
+		}
+		100% {
+			transform: translateY(0px) translateX(0px);
+		}
+	}
+	@-webkit-keyframes warble {
+		0% {
+			transform: translateY(0px) translateX(0px) scale(1);
+		}
+		25% {
+			transform: translateY(210px) translateX(-240px) scale(1.3);
+		}
+		35% {
+			transform: translateX(10px);
+		}
+		50% {
+			transform: translateY(-150px) scale(0.4);
+		}
+		75% {
+			transform: translateY(310px) translateX(400px) scale(1.9);
+		}
+		100% {
+			transform: translateY(0px) translateX(0px);
+		}
+	}
+	@-moz-keyframes warble {
+		0% {
+			transform: translateY(0px) translateX(0px) scale(1);
+		}
+		25% {
+			transform: translateY(210px) translateX(-240px) scale(1.3);
+		}
+		35% {
+			transform: translateX(10px);
+		}
+		50% {
+			transform: translateY(-150px) scale(0.4);
+		}
+		75% {
+			transform: translateY(310px) translateX(400px) scale(1.9);
+		}
+		100% {
+			transform: translateY(0px) translateX(0px);
+		}
+	}
+	@-o-keyframes warble {
+		0% {
+			transform: translateY(0px) translateX(0px) scale(1);
+		}
+		25% {
+			transform: translateY(210px) translateX(-240px) scale(1.3);
+		}
+		35% {
+			transform: translateX(10px);
+		}
+		50% {
+			transform: translateY(-150px) scale(0.4);
+		}
+		75% {
+			transform: translateY(310px) translateX(400px) scale(1.9);
+		}
+		100% {
+			transform: translateY(0px) translateX(0px);
 		}
 	}
 	@keyframes fadein {

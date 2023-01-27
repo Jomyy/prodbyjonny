@@ -6,7 +6,7 @@ import { page } from '$app/stores'
 export async function load({ params }) {
     
    
-    const pb = new PocketBase('https://h2998444.stratoserver.net:443');
+    const pb = new PocketBase('https://h2998444.stratoserver.net:8443');
     const record = await pb.collection('releases').getFirstListItem('camelcaseName=' + '"' + params.name +'"' , {})
    
    

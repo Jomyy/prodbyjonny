@@ -1,6 +1,17 @@
 <script>
 	/** @type {import('./$types').PageData} */
 	export let data;
+
+	function copyToClipboard() {
+		var dummy = document.createElement('input'),
+			text = window.location.href;
+
+		document.body.appendChild(dummy);
+		dummy.value = text;
+		dummy.select();
+		document.execCommand('copy');
+		document.body.removeChild(dummy);
+	}
 </script>
 
 <svelte:head>
@@ -13,7 +24,12 @@
 <div id="container">
 	<div id="releaseData">
 		<img src={data.post.imageUrl} id="cover" alt="SongCover" />
-		<h2>{data.post.releaseData.name}</h2>
+		<div>
+			<h2>{data.post.releaseData.name}</h2>
+			<a on:click={copyToClipboard} href="/release/{data.post.releaseData.camelcaseName}"
+				>Copy URL</a
+			>
+		</div>
 	</div>
 	<div id="links">
 		<div class="link">
@@ -56,6 +72,16 @@
 </div>
 
 <style>
+	#releaseData div {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		margin: 0px;
+	}
+	#releaseData div a {
+		align-self: auto;
+		margin-left: 20px;
+	}
 	.StreamingIcon {
 		width: 40px;
 		margin-right: 15px;
@@ -145,6 +171,8 @@
 		transition: margin-left 1s;
 		display: flex;
 		align-items: flex-end;
+
+		margin: 0px;
 	}
 	#background {
 		width: 100vw;
@@ -175,6 +203,15 @@
 		h2 {
 			margin-left: 0;
 			margin-top: 10px;
+		}
+		#releaseData div {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+		#releaseData div a {
+			align-self: auto;
+			margin-left: 0px;
 		}
 	}
 </style>
