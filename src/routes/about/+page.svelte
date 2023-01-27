@@ -16,8 +16,8 @@
 			Jonathan Enking<br />
 		</p>
 		<p>
-			<strong>Contact:</strong> <br />
-			Tel: 0176-16811564<br />
+			<strong>Contact:</strong>
+
 			E-Mail: <a href="mailto:contact@prodbyjonny.de">contact@prodbyjonny.de</a>
 			<br />
 		</p>
