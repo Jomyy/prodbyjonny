@@ -6,7 +6,7 @@ import { page } from '$app/stores'
 export async function load({ params }) {
     
    
-    const pb = new PocketBase('https://red-processor.pockethost.io');
+    const pb = new PocketBase('http://81.169.132.43:80');
     const record = await pb.collection('releases').getFullList()
     record.forEach(item => {
         item.imageUrl = pb.getFileUrl(item,item.cover)
