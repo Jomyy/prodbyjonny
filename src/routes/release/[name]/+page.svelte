@@ -1,7 +1,7 @@
 <script>
 	/** @type {import('./$types').PageData} */
 	export let data;
-
+	let infoClass = '0';
 	function copyToClipboard() {
 		var dummy = document.createElement('input'),
 			text = window.location.href;
@@ -11,6 +11,10 @@
 		dummy.select();
 		document.execCommand('copy');
 		document.body.removeChild(dummy);
+		infoClass = '1';
+		setTimeout(() => {
+			infoClass = '0';
+		}, 3000);
 	}
 </script>
 
@@ -21,6 +25,7 @@
 </svelte:head>
 
 <img src={data.post.imageUrl} id="background" alt="Background" />
+<div style="opacity:{infoClass}" id="infoblock">URL Succesfully Copied!</div>
 <div id="container">
 	<div id="releaseData">
 		<img src={data.post.imageUrl} id="cover" alt="SongCover" />
@@ -72,6 +77,27 @@
 </div>
 
 <style>
+	#infoblock {
+		opacity: 0;
+		transition: opacity 150ms ease-in-out;
+		position: fixed;
+
+		height: 40px;
+		background-color: #181818;
+		border-radius: 5px;
+		padding: 20px;
+		padding-left: 40px;
+		padding-right: 40px;
+		left: 50%;
+		transform: translateX(-50%);
+		bottom: 120px;
+		box-shadow: rgba(0, 0, 0, 0.52) 3px 3px 10px;
+		color: #f3f3f3;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		font-family: 'PoppinsLight';
+	}
 	#releaseData div {
 		display: flex;
 		flex-direction: column;

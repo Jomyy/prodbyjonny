@@ -54,9 +54,7 @@
 	footer {
 		width: 100vw;
 		height: 40px;
-		background-color: #1e1e1e77;
-		backdrop-filter: blur(40px) brightness(0.7);
-		-webkit-backdrop-filter: blur(40px) brightness(0.7);
+		background-color: #1e1e1e;
 		position: fixed;
 		bottom: 0px;
 		display: flex;
