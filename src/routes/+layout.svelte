@@ -92,7 +92,7 @@
 		</div>
 	{/if}
 </nav>
-<main data-nav-open={navbarExpanded || mobileInterfaceOn}>
+<main>
 	<slot />
 </main>
 <footer>
@@ -148,7 +148,6 @@
 		margin-top: 70px;
 		margin-bottom: 40px;
 		z-index: 5;
-		pointer-events: none;
 	}
 	nav {
 		position: fixed;
