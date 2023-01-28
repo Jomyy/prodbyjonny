@@ -50,7 +50,7 @@
 	<p id="navname" data-expanded={navbarExpanded}>prodbyjonny</p>
 	<!-- svelte-ignore a11y-click-events-have-key-events -->
 	<img
-		src="menuicon.png"
+		src="MenuHamburger.png"
 		alt="menuiocon"
 		draggable="false"
 		class="menu-icon"
@@ -59,7 +59,7 @@
 	/>
 	<!-- svelte-ignore a11y-click-events-have-key-events -->
 	<img
-		src="menuIconClose.png"
+		src="MenuX.png"
 		alt="menuiocon"
 		draggable="false"
 		class="menu-icon menu-icon-close"
