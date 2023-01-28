@@ -147,7 +147,7 @@
 		justify-content: space-evenly;
 		left: 0px;
 		align-items: center;
-		margin-top: 40px;
+
 		margin-bottom: 40px;
 		height: calc(100vh - 110px);
 	}
@@ -159,12 +159,12 @@
 			align-items: center;
 			flex-direction: column;
 			height: fit-content;
-			margin-top: 40px;
+			margin-top: 100px;
 			margin-bottom: 40px;
 		}
 
 		section {
-			margin-top: 10px;
+			margin-top: 40px;
 			width: 70vw;
 		}
 		#portrait {
@@ -172,7 +172,7 @@
 			max-height: none;
 			height: 50vh;
 			width: auto;
-			margin-top: 0px;
+
 			margin: 0px;
 		}
 	}

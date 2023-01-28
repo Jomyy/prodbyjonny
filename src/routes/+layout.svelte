@@ -2,10 +2,20 @@
 	import { page } from '$app/stores';
 	import NProgress from 'nprogress';
 	import { navigating } from '$app/stores';
+	import { fade } from 'svelte/transition';
 
+	let navbarExpanded = false;
+	let mobileInterfaceOn = false;
+	let scrnWidth = 0;
 	// NProgress css
 	import 'nprogress/nprogress.css';
-
+	$: {
+		if (scrnWidth < 600) {
+			mobileInterfaceOn = false;
+		} else {
+			mobileInterfaceOn = true;
+		}
+	}
 	NProgress.configure({
 		// Full list: https://github.com/rstacruz/nprogress#configuration
 		minimum: 0.16,
@@ -20,20 +30,57 @@
 			NProgress.done();
 		}
 	}
+	function changeNavBarState() {
+		navbarExpanded = !navbarExpanded;
+	}
 </script>
 
-<nav>
-	<div>
-		<li aria-current={$page.url.pathname == '/' ? 'page' : undefined}>
-			<a href="/">Home</a>
-		</li>
-		<li aria-current={$page.url.pathname.startsWith('/releases') ? 'page' : undefined}>
-			<a href="/releases">Releases</a>
-		</li>
-		<li aria-current={$page.url.pathname.startsWith('/contact') ? 'page' : undefined}>
-			<a href="/contact">Contact</a>
-		</li>
-	</div>
+<svelte:window bind:outerWidth={scrnWidth} />
+<nav data-nav-open={navbarExpanded}>
+	<p id="navname" data-expanded={navbarExpanded}>prodbyjonny</p>
+	<!-- svelte-ignore a11y-click-events-have-key-events -->
+	<img
+		src="menuicon.png"
+		alt="menuiocon"
+		draggable="false"
+		class="menu-icon"
+		data-expanded={!navbarExpanded}
+		on:click={changeNavBarState}
+	/>
+	<!-- svelte-ignore a11y-click-events-have-key-events -->
+	<img
+		src="menuIconClose.png"
+		alt="menuiocon"
+		draggable="false"
+		class="menu-icon menu-icon-close"
+		data-expanded={navbarExpanded}
+		on:click={changeNavBarState}
+	/>
+	{#if navbarExpanded || mobileInterfaceOn}
+		<div class="navbar" transition:fade={{ delay: 0, duration: 400 }}>
+			<!-- svelte-ignore a11y-click-events-have-key-events -->
+			<li
+				aria-current={$page.url.pathname == '/' ? 'page' : undefined}
+				on:click={changeNavBarState}
+			>
+				<a href="/">Home</a>
+			</li>
+			<!-- svelte-ignore a11y-click-events-have-key-events -->
+			<li
+				aria-current={$page.url.pathname.startsWith('/releases') ? 'page' : undefined}
+				on:click={changeNavBarState}
+			>
+				<a href="/releases">Releases</a>
+			</li>
+			<!-- svelte-ignore a11y-click-events-have-key-events -->
+			<li
+				aria-current={$page.url.pathname.startsWith('/contact') ? 'page' : undefined}
+				on:click={changeNavBarState}
+			>
+				<a href="/contact">Contact</a>
+			</li>
+		</div>
+	{/if}
 </nav>
 <main>
 	<slot />
@@ -43,6 +90,10 @@
 </footer>
 
 <style>
+	.menu-icon {
+		display: none;
+	}
+
 	@font-face {
 		font-family: 'Poppins';
 		src: url('/fonts/PoppinsSemiBold.ttf') format('truetype');
@@ -127,21 +178,70 @@
 		height: 100%;
 		width: 100%;
 	}
-
+	nav p {
+		display: none;
+	}
 	@media only screen and (max-width: 600px) {
-		nav {
-			top: auto;
-			bottom: 40px;
+		nav p {
+			font-family: 'PoppinsLight';
+			color: #f3f3f3;
+			margin: 0px;
+			height: 70px;
+			text-align: center;
+			cursor: pointer;
+			position: fixed;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			box-sizing: border-box;
+			left: 15px;
+			opacity: 1;
+			transition: opacity 150ms ease-in-out;
 		}
-		nav div {
-			justify-content: space-around;
+		p[data-expanded='true'] {
+			opacity: 0;
+		}
+		.menu-icon {
+			display: block;
+			filter: invert();
+			height: 70px;
+			width: 70px;
+			cursor: pointer;
+			position: fixed;
+			padding: 20px;
+			box-sizing: border-box;
+			right: 0px;
+
+			opacity: 1;
+
+			transition: transform 400ms ease-in-out, opacity 400ms ease-in-out;
+		}
+		.menu-icon[data-expanded='false'] {
+			opacity: 0;
+			transform: rotate(-200deg);
+		}
+		.menu-icon-close[data-expanded='false'] {
+			opacity: 0;
+			transform: rotate(200deg);
+		}
+
+		.navbar {
+			bottom: 40px;
+			flex-direction: column;
+			justify-content: end;
+			padding-bottom: 40px;
+		}
+		nav {
+			display: flex;
+			flex-direction: column;
+			transition: height 400ms ease-in-out;
+		}
+		nav[data-nav-open='true'] {
+			height: 100vh;
 		}
 		li {
 			width: 100%;
-		}
-		main {
-			margin-top: 0px;
-			margin-bottom: 110px;
+			height: 80px;
 		}
 	}
 </style>
