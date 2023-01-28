@@ -3,14 +3,23 @@
 	import NProgress from 'nprogress';
 	import { navigating } from '$app/stores';
 	import { fade } from 'svelte/transition';
-
+	import { onMount } from 'svelte';
+	import * as styleManager from '../styleManager';
 	let navbarExpanded = false;
 	let mobileInterfaceOn = false;
 	let scrnWidth = 0;
 	// NProgress css
+
 	import 'nprogress/nprogress.css';
 	$: {
-		if (scrnWidth < 600) {
+		if (mobileInterfaceOn && navbarExpanded) {
+			document.body.style.overflow = 'hidden';
+		} else {
+			document.body.style.overflow = 'auto';
+		}
+	}
+	$: {
+		if (scrnWidth > 600) {
 			mobileInterfaceOn = false;
 		} else {
 			mobileInterfaceOn = true;
@@ -36,7 +45,8 @@
 </script>
 
 <svelte:window bind:outerWidth={scrnWidth} />
-<nav data-nav-open={navbarExpanded}>
+
+<nav data-nav-open={navbarExpanded} style="">
 	<p id="navname" data-expanded={navbarExpanded}>prodbyjonny</p>
 	<!-- svelte-ignore a11y-click-events-have-key-events -->
 	<img
@@ -56,7 +66,7 @@
 		data-expanded={navbarExpanded}
 		on:click={changeNavBarState}
 	/>
-	{#if navbarExpanded || mobileInterfaceOn}
+	{#if (navbarExpanded && mobileInterfaceOn) || !mobileInterfaceOn}
 		<div class="navbar" transition:fade={{ delay: 0, duration: 400 }}>
 			<!-- svelte-ignore a11y-click-events-have-key-events -->
 			<li
@@ -82,7 +92,7 @@
 		</div>
 	{/if}
 </nav>
-<main>
+<main data-nav-open={navbarExpanded || mobileInterfaceOn}>
 	<slot />
 </main>
 <footer>
@@ -137,6 +147,8 @@
 	main {
 		margin-top: 70px;
 		margin-bottom: 40px;
+		z-index: 5;
+		pointer-events: none;
 	}
 	nav {
 		position: fixed;
@@ -149,6 +161,7 @@
 
 		list-style: none;
 		z-index: 10;
+		overflow: hidden;
 	}
 	li {
 		height: 100%;
@@ -182,6 +195,11 @@
 		display: none;
 	}
 	@media only screen and (max-width: 600px) {
+		main[data-nav-open='true'] {
+			overflow-y: hidden;
+			pointer-events: none;
+		}
+
 		nav p {
 			font-family: 'PoppinsLight';
 			color: #f3f3f3;
@@ -228,8 +246,8 @@
 		.navbar {
 			bottom: 40px;
 			flex-direction: column;
-			justify-content: end;
-			padding-bottom: 40px;
+			justify-content: center;
+			height: 100%;
 		}
 		nav {
 			display: flex;
@@ -238,6 +256,9 @@
 		}
 		nav[data-nav-open='true'] {
 			height: 100vh;
+			bottom: 0px;
+			z-index: 10000;
+			overflow: hidden;
 		}
 		li {
 			width: 100%;
