@@ -212,7 +212,7 @@
 	}
 	@media only screen and (max-width: 600px) {
 		#container {
-			margin-top: 5vh;
+			margin-top: 12vh;
 			width: 100%;
 			height: 100%;
 			display: flex;
