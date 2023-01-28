@@ -37,13 +37,16 @@
 			<a href="https://youtube.com/@prodbyjonny" draggable="false">
 				<img src="YoutubeLogoHR.webp" alt="spotify" class="icon" draggable="false" />
 			</a>
+			<a href="https://www.instagram.com/jonathanzverbot/" draggable="false">
+				<img src="InstagramIcon.webp" alt="spotify" class="icon" draggable="false" />
+			</a>
 		</div>
 	</div>
 </main>
 
 <style>
 	.icon {
-		width: 60px;
+		width: 50px;
 	}
 	#left {
 		background-size: contain;
