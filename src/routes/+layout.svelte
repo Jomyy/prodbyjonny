@@ -228,7 +228,7 @@
 			padding: 20px;
 			box-sizing: border-box;
 			right: 0px;
-
+			-webkit-tap-highlight-color: transparent;
 			opacity: 1;
 
 			transition: transform 400ms ease-in-out, opacity 400ms ease-in-out;
