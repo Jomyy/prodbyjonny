@@ -1,5 +1,7 @@
 <svelte:head>
 	<title>Home</title>
+	<meta property="og:title" content={'About Me'} />
+	<meta property="og:image" content={'portrait.webp'} />
 </svelte:head>
 
 <img src="portrait.webp" alt="back" id="background" draggable="false" />

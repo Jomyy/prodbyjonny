@@ -1,4 +1,5 @@
 <script>
+	import { MetaTags } from 'svelte-meta-tags';
 	/** @type {import('./$types').PageData} */
 	export let data;
 	let infoClass = '0';
@@ -23,7 +24,23 @@
 	<meta property="og:image" content={data.post.imageUrl} />
 	<title>{data.post.releaseData.name}</title>
 </svelte:head>
-
+<MetaTags
+	openGraph={{
+		type: 'website',
+		url: 'https://prodbyjonny.de/release/' + data.post.releaseData.camelcaseName,
+		title: data.post.releaseData.name,
+		description: 'Now on Spotify etc.',
+		images: [
+			{
+				url: data.post.imageUrl,
+				width: 800,
+				height: 800,
+				alt: 'Cover'
+			}
+		],
+		site_name: 'Jonny - ' + data.post.releaseData.name
+	}}
+/>
 <img src={data.post.imageUrl} id="background" alt="Background" />
 <div style="opacity:{infoClass}" id="infoblock">URL Succesfully Copied!</div>
 <div id="container">

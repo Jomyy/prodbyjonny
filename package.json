@@ -25,6 +25,7 @@
 	},
 	"type": "module",
 	"dependencies": {
-		"pocketbase": "^0.10.0"
+		"pocketbase": "^0.10.0",
+		"svelte-meta-tags": "^2.6.5"
 	}
 }
