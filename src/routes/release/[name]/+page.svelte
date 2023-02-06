@@ -1,21 +1,24 @@
 <script>
 	import { MetaTags } from 'svelte-meta-tags';
+	import { browser } from '$app/environment';
 	/** @type {import('./$types').PageData} */
 	export let data;
 	let infoClass = '0';
 	function copyToClipboard() {
-		var dummy = document.createElement('input'),
-			text = window.location.href;
+		if (browser) {
+			var dummy = document.createElement('input'),
+				text = window.location.href;
 
-		document.body.appendChild(dummy);
-		dummy.value = text;
-		dummy.select();
-		document.execCommand('copy');
-		document.body.removeChild(dummy);
-		infoClass = '1';
-		setTimeout(() => {
-			infoClass = '0';
-		}, 3000);
+			document.body.appendChild(dummy);
+			dummy.value = text;
+			dummy.select();
+			document.execCommand('copy');
+			document.body.removeChild(dummy);
+			infoClass = '1';
+			setTimeout(() => {
+				infoClass = '0';
+			}, 3000);
+		}
 	}
 </script>
 

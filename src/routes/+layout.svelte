@@ -3,8 +3,7 @@
 	import NProgress from 'nprogress';
 	import { navigating } from '$app/stores';
 	import { fade } from 'svelte/transition';
-	import { onMount } from 'svelte';
-	import * as styleManager from '../styleManager';
+	import { browser } from '$app/environment';
 	let navbarExpanded = false;
 	let mobileInterfaceOn = false;
 	let scrnWidth = 0;
@@ -12,10 +11,12 @@
 
 	import 'nprogress/nprogress.css';
 	$: {
-		if (mobileInterfaceOn && navbarExpanded) {
-			document.body.style.overflow = 'hidden';
-		} else {
-			document.body.style.overflow = 'auto';
+		if (browser) {
+			if (mobileInterfaceOn && navbarExpanded) {
+				document.body.style.overflow = 'hidden';
+			} else {
+				document.body.style.overflow = 'auto';
+			}
 		}
 	}
 	$: {
