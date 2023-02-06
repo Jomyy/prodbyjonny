@@ -1,7 +1,7 @@
 <svelte:head>
 	<title>About This Site</title>
 </svelte:head>
-<img src="TheAftermathIcon.webp" alt="back" id="background" />
+<img src="$lib/images/TheAftermathIcon.webp" alt="back" id="background" />
 <div class="impressum">
 	<section>
 		<h1>About this site</h1>
