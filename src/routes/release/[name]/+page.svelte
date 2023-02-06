@@ -19,11 +19,6 @@
 	}
 </script>
 
-<svelte:head>
-	<meta property="og-title" content={data.post.releaseData.name} />
-	<meta property="og:image" content={data.post.imageUrl} />
-	<title>{data.post.releaseData.name}</title>
-</svelte:head>
 <MetaTags
 	openGraph={{
 		type: 'website',
