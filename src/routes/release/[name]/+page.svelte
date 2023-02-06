@@ -3,20 +3,6 @@
 	/** @type {import('./$types').PageData} */
 	export let data;
 	let infoClass = '0';
-	function copyToClipboard() {
-		var dummy = document.createElement('input'),
-			text = window.location.href;
-
-		document.body.appendChild(dummy);
-		dummy.value = text;
-		dummy.select();
-		document.execCommand('copy');
-		document.body.removeChild(dummy);
-		infoClass = '1';
-		setTimeout(() => {
-			infoClass = '0';
-		}, 3000);
-	}
 </script>
 
 <svelte:head>
@@ -32,9 +18,6 @@
 		<img src={data.post.imageUrl} id="cover" alt="SongCover" />
 		<div>
 			<h2>{data.post.releaseData.name}</h2>
-			<a on:click={copyToClipboard} href="/release/{data.post.releaseData.camelcaseName}"
-				>Copy URL</a
-			>
 		</div>
 	</div>
 	<div id="links">
