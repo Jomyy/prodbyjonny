@@ -9,6 +9,8 @@
 <img src="$lib/images/portrait.webp" alt="back" id="background" />
 <svelte:head>
 	<title>Releases</title>
+	<meta property="og:title" content={'Releases'} />
+	<meta property="og:description" content={'All Releases by Jonny'} />
 </svelte:head>
 <div>
 	{#each data.releases as release}
