@@ -4,6 +4,7 @@
 	import { navigating } from '$app/stores';
 	import { fade } from 'svelte/transition';
 	import { browser } from '$app/environment';
+
 	let navbarExpanded = false;
 	let mobileInterfaceOn = false;
 	let scrnWidth = 0;
@@ -51,7 +52,7 @@
 	<p id="navname" data-expanded={navbarExpanded}>prodbyjonny</p>
 	<!-- svelte-ignore a11y-click-events-have-key-events -->
 	<img
-		src="MenuHamburger.png"
+		src="$lib/images/MenuHamburger.png"
 		alt="menuiocon"
 		draggable="false"
 		class="menu-icon"
@@ -60,7 +61,7 @@
 	/>
 	<!-- svelte-ignore a11y-click-events-have-key-events -->
 	<img
-		src="MenuX.png"
+		src="$lib/images/MenuX.png"
 		alt="menuiocon"
 		draggable="false"
 		class="menu-icon menu-icon-close"

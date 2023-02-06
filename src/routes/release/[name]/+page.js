@@ -1,15 +1,12 @@
-export let ssr = false;
+
 import PocketBase from 'pocketbase';
-import { page } from '$app/stores'
+
 
 
 /** @type {import('./$types').PageLoad} */
 export async function load({ params }) {
-    
-   
     const pb = new PocketBase('https://h2998444.stratoserver.net:8443');
     const record = await pb.collection('releases').getFirstListItem('camelcaseName=' + '"' + params.name +'"' , {})
-   
    
     return {
       post: {

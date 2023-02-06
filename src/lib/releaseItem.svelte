@@ -9,7 +9,7 @@
 <div id="container">
 	<a href={'/release/' + data.camelcaseName}
 		><div class="overlay">
-			<img src="linkIcon.svg" alt="icon" id="icon" />
+			<img src="$lib/images/linkIcon.svg" alt="icon" id="icon" />
 		</div>
 	</a>
 

@@ -4,10 +4,10 @@
 	<meta property="og:image" content={'portrait.webp'} />
 </svelte:head>
 
-<img src="portrait.webp" alt="back" id="background" draggable="false" />
+<img src="$lib/images/portrait.webp" alt="back" id="background" draggable="false" />
 <main>
 	<div id="left">
-		<img src="portrait.webp" alt="Portrtait" id="portrait" draggable="false" />
+		<img src="$lib/images/portrait.webp" alt="Portrtait" id="portrait" draggable="false" />
 	</div>
 
 	<div id="right">
@@ -22,22 +22,22 @@
 				href="https://open.spotify.com/artist/6sP4WzEXeQ8vifuUgr3tZu?si=m-xXvsUYRb-vp7gCRw2T_g"
 				draggable="false"
 			>
-				<img src="SpotifyLogoHR.webp" alt="spotify" class="icon" draggable="false" />
+				<img src="$lib/images/SpotifyLogoHR.webp" alt="spotify" class="icon" draggable="false" />
 			</a>
 			<a
 				href="https://music.youtube.com/channel/UCkxj6IUOxepqs6tOEYAIvBg?feature=share"
 				draggable="false"
 			>
-				<img src="YTMusicLogoHr.webp" alt="spotify" class="icon" draggable="false" />
+				<img src="$lib/images/YTMusicLogoHr.webp" alt="spotify" class="icon" draggable="false" />
 			</a>
 			<a href="https://music.apple.com/de/artist/jonny/1643013637" draggable="false">
-				<img src="AppleMusicLogoHR.webp" alt="spotify" class="icon" draggable="false" />
+				<img src="$lib/images/AppleMusicLogoHR.webp" alt="spotify" class="icon" draggable="false" />
 			</a>
 			<a href="https://youtube.com/@prodbyjonny" draggable="false">
-				<img src="YoutubeLogoHR.webp" alt="spotify" class="icon" draggable="false" />
+				<img src="$lib/images/YoutubeLogoHR.webp" alt="spotify" class="icon" draggable="false" />
 			</a>
 			<a href="https://www.instagram.com/jonathanzverbot/" draggable="false">
-				<img src="InstagramIcon.webp" alt="spotify" class="icon" draggable="false" />
+				<img src="$lib/images/InstagramIcon.webp" alt="spotify" class="icon" draggable="false" />
 			</a>
 		</div>
 	</div>

@@ -1,8 +1,8 @@
 <svelte:head>
 	<title>Contact Me</title>
 </svelte:head>
-<img src="TheAftermathIcon.webp" alt="back" id="background" />
-<img src="TheAftermathIcon.webp" alt="banner" id="banner" />
+<img src="$lib/images/TheAftermathIcon.webp" alt="back" id="background" />
+<img src="$lib/images/TheAftermathIcon.webp" alt="banner" id="banner" />
 <div class="impressum">
 	<section>
 		<p>

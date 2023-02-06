@@ -12,7 +12,7 @@
 </svelte:head>
 
 <img src={data.post.imageUrl} id="background" alt="Background" />
-<div style="opacity:{infoClass}" id="infoblock">URL Succesfully Copied!</div>
+
 <div id="container">
 	<div id="releaseData">
 		<img src={data.post.imageUrl} id="cover" alt="SongCover" />
@@ -23,7 +23,7 @@
 	<div id="links">
 		<div class="link">
 			<div class="streamingName">
-				<img src="/SpotifyIcon.png" alt="SpotifyIcon" class="StreamingIcon" />
+				<img src="$lib/images/SpotifyIcon.png" alt="SpotifyIcon" class="StreamingIcon" />
 				<p>Spotify</p>
 			</div>
 			<div class="linkDiv">
@@ -32,7 +32,7 @@
 		</div>
 		<div class="linkOdd">
 			<div class="streamingName">
-				<img src="/AppleMusicIcon.png" alt="AppleMusicIcon" class="StreamingIcon" />
+				<img src="$lib/images//AppleMusicIcon.png" alt="AppleMusicIcon" class="StreamingIcon" />
 				<p>Apple Music</p>
 			</div>
 			<div class="linkDiv">
@@ -41,7 +41,7 @@
 		</div>
 		<div class="link">
 			<div class="streamingName">
-				<img src="/YoutubeMusicIcon.png" alt="YoutubeMusicIcon" class="StreamingIcon" />
+				<img src="$lib/images//YoutubeMusicIcon.png" alt="YoutubeMusicIcon" class="StreamingIcon" />
 				<p>Youtube Music</p>
 			</div>
 			<div class="linkDiv">
@@ -50,7 +50,7 @@
 		</div>
 		<div class="linkOdd">
 			<div class="streamingName">
-				<img src="/DeezerIcon.png" alt="DeezerIcon" class="StreamingIcon" />
+				<img src="$lib/images//DeezerIcon.png" alt="DeezerIcon" class="StreamingIcon" />
 				<p>Deezer</p>
 			</div>
 			<div class="linkDiv">

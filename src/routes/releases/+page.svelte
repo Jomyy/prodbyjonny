@@ -6,7 +6,7 @@
 	export let data;
 </script>
 
-<img src="portrait.webp" alt="back" id="background" />
+<img src="$lib/images/portrait.webp" alt="back" id="background" />
 <svelte:head>
 	<title>Releases</title>
 </svelte:head>
