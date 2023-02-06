@@ -1,44 +1,30 @@
 <script>
 	import { MetaTags } from 'svelte-meta-tags';
-	import { browser } from '$app/environment';
 	/** @type {import('./$types').PageData} */
 	export let data;
 	let infoClass = '0';
 	function copyToClipboard() {
-		if (browser) {
-			var dummy = document.createElement('input'),
-				text = window.location.href;
+		var dummy = document.createElement('input'),
+			text = window.location.href;
 
-			document.body.appendChild(dummy);
-			dummy.value = text;
-			dummy.select();
-			document.execCommand('copy');
-			document.body.removeChild(dummy);
-			infoClass = '1';
-			setTimeout(() => {
-				infoClass = '0';
-			}, 3000);
-		}
+		document.body.appendChild(dummy);
+		dummy.value = text;
+		dummy.select();
+		document.execCommand('copy');
+		document.body.removeChild(dummy);
+		infoClass = '1';
+		setTimeout(() => {
+			infoClass = '0';
+		}, 3000);
 	}
 </script>
 
-<MetaTags
-	openGraph={{
-		type: 'website',
-		url: 'https://prodbyjonny.de/release/' + data.post.releaseData.camelcaseName,
-		title: data.post.releaseData.name,
-		description: 'Now on Spotify etc.',
-		images: [
-			{
-				url: data.post.imageUrl,
-				width: 800,
-				height: 800,
-				alt: 'Cover'
-			}
-		],
-		site_name: 'Jonny - ' + data.post.releaseData.name
-	}}
-/>
+<svelte:head>
+	<meta property="og:title" content={data.post.releaseData.name} />
+	<meta property="og:image" content={data.post.imageUrl} />
+	<title>{data.post.releaseData.name}</title>
+</svelte:head>
+
 <img src={data.post.imageUrl} id="background" alt="Background" />
 <div style="opacity:{infoClass}" id="infoblock">URL Succesfully Copied!</div>
 <div id="container">
