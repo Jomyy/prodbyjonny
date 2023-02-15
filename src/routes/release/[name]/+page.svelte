@@ -102,6 +102,8 @@
 		justify-content: center;
 		align-items: center;
 		margin-top: 40px;
+		list-style: none;
+		padding: 0px;
 	}
 	.link:nth-child(odd) {
 		height: 80px;
@@ -184,8 +186,9 @@
 	}
 	@media only screen and (max-width: 600px) {
 		#container {
+			margin: 0px;
 			margin-top: 12vh;
-			width: 100%;
+			width: 100vw;
 			height: 100%;
 			display: flex;
 			margin-left: 0;
@@ -207,6 +210,7 @@
 			flex-direction: column;
 			align-items: center;
 		}
+
 		#releaseData div a {
 			align-self: auto;
 			margin-left: 0px;
