@@ -20,68 +20,61 @@
 			<h2>{data.post.releaseData.name}</h2>
 		</div>
 	</div>
-	<div id="links">
-		<div class="link">
-			<div class="streamingName">
-				<img src="$lib/images/SpotifyIcon.png" alt="SpotifyIcon" class="StreamingIcon" />
-				<p>Spotify</p>
+	<ul id="links">
+		{#if data.post.releaseData.spotifyurl != ''}
+			<div class="link">
+				<div class="streamingName">
+					<img src="$lib/images/SpotifyIcon.png" alt="SpotifyIcon" class="StreamingIcon" />
+					<p>Spotify</p>
+				</div>
+				<div class="linkDiv">
+					<a href={data.post.releaseData.spotifyurl}>Play</a>
+				</div>
 			</div>
-			<div class="linkDiv">
-				<a href={data.post.releaseData.spotifyurl}>Play</a>
+		{/if}
+		{#if data.post.releaseData.applemusicurl != ''}
+			<div class="link">
+				<div class="streamingName">
+					<img src="$lib/images//AppleMusicIcon.png" alt="AppleMusicIcon" class="StreamingIcon" />
+					<p>Apple Music</p>
+				</div>
+				<div class="linkDiv">
+					<a href={data.post.releaseData.applemusicurl}>Play</a>
+				</div>
 			</div>
-		</div>
-		<div class="linkOdd">
-			<div class="streamingName">
-				<img src="$lib/images//AppleMusicIcon.png" alt="AppleMusicIcon" class="StreamingIcon" />
-				<p>Apple Music</p>
+		{/if}
+
+		{#if data.post.releaseData.youtubemusicurl != ''}
+			<div class="link">
+				<div class="streamingName">
+					<img
+						src="$lib/images//YoutubeMusicIcon.png"
+						alt="YoutubeMusicIcon"
+						class="StreamingIcon"
+					/>
+					<p>Youtube Music</p>
+				</div>
+				<div class="linkDiv">
+					<a href={data.post.releaseData.youtubemusicurl}>Play</a>
+				</div>
 			</div>
-			<div class="linkDiv">
-				<a href={data.post.releaseData.applemusicurl}>Play</a>
+		{/if}
+
+		{#if data.post.releaseData.deezerurl != ''}
+			<div class="link">
+				<div class="streamingName">
+					<img src="$lib/images//DeezerIcon.png" alt="DeezerIcon" class="StreamingIcon" />
+					<p>Deezer</p>
+				</div>
+				<div class="linkDiv">
+					<a href={data.post.releaseData.deezerurl}>Play</a>
+				</div>
 			</div>
-		</div>
-		<div class="link">
-			<div class="streamingName">
-				<img src="$lib/images//YoutubeMusicIcon.png" alt="YoutubeMusicIcon" class="StreamingIcon" />
-				<p>Youtube Music</p>
-			</div>
-			<div class="linkDiv">
-				<a href={data.post.releaseData.youtubemusicurl}>Play</a>
-			</div>
-		</div>
-		<div class="linkOdd">
-			<div class="streamingName">
-				<img src="$lib/images//DeezerIcon.png" alt="DeezerIcon" class="StreamingIcon" />
-				<p>Deezer</p>
-			</div>
-			<div class="linkDiv">
-				<a href={data.post.releaseData.deezerurl}>Play</a>
-			</div>
-		</div>
-	</div>
+		{/if}
+	</ul>
 </div>
 
 <style>
-	#infoblock {
-		opacity: 0;
-		transition: opacity 150ms ease-in-out;
-		position: fixed;
-
-		height: 40px;
-		background-color: #181818;
-		border-radius: 5px;
-		padding: 20px;
-		padding-left: 40px;
-		padding-right: 40px;
-		left: 50%;
-		transform: translateX(-50%);
-		bottom: 120px;
-		box-shadow: rgba(0, 0, 0, 0.52) 3px 3px 10px;
-		color: #f3f3f3;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		font-family: 'PoppinsLight';
-	}
 	#releaseData div {
 		display: flex;
 		flex-direction: column;
@@ -116,8 +109,16 @@
 		align-items: center;
 		margin-top: 40px;
 	}
-
-	.link {
+	.link:nth-child(odd) {
+		height: 80px;
+		display: flex;
+		width: 100%;
+		font-family: PoppinsLight;
+		font-display: swap;
+		align-items: center;
+		justify-content: space-between;
+	}
+	.link:nth-child(even) {
 		display: flex;
 		width: 100%;
 		height: 80px;
@@ -127,15 +128,7 @@
 		justify-content: space-between;
 		background-color: #181818;
 	}
-	.linkOdd {
-		height: 80px;
-		display: flex;
-		width: 100%;
-		font-family: PoppinsLight;
-		font-display: swap;
-		align-items: center;
-		justify-content: space-between;
-	}
+
 	a {
 		color: #f3f3f3;
 		text-decoration: none;

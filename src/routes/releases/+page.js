@@ -10,9 +10,9 @@ export async function load({ params }) {
     record.forEach(item => {
         item.imageUrl = pb.getFileUrl(item,item.cover)
     })
-   
+    
     return {
-        releases:record
+        releases:record.reverse()
         
     }
   }
