@@ -39,10 +39,7 @@
 		-o-animation: fadein 1s; /* Opera < 12.1 */
 		animation: fadein 1s;
 	}
-	@font-face {
-		font-family: 'PoppinsLight';
-		src: url('/fonts/PoppinsLight.ttf') format('truetype');
-	}
+
 	.impressum {
 		width: 100vw;
 
@@ -51,8 +48,8 @@
 		justify-content: center;
 		align-items: center;
 		color: #f3f3f3;
-		font-family: PoppinsLight;
-		font-display: swap;
+		font-family: 'Poppins', sans-serif;
+		font-weight: lighter;
 		text-align: start;
 		-webkit-animation: fadein 1s; /* Safari, Chrome and Opera > 12.1 */
 		-moz-animation: fadein 1s; /* Firefox < 16 */

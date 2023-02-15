@@ -11,18 +11,17 @@
 		align-items: center;
 		height: calc(100vh - 110px);
 	}
-	@font-face {
-		font-family: 'PoppinsLight';
-		src: url('/fonts/PoppinsLight.ttf') format('truetype');
-	}
+
 	a {
 		text-align: center;
 		color: #f3f3f3;
-		font-family: PoppinsLight;
+		font-family: 'Poppins', sans-serif;
+		font-weight: lighter;
 	}
 	p {
 		text-align: center;
-		font-family: PoppinsLight;
+		font-family: 'Poppins', sans-serif;
+		font-weight: lighter;
 		color: #f3f3f3;
 	}
 </style>

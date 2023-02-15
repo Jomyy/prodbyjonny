@@ -1,5 +1,4 @@
 <script>
-	import { MetaTags } from 'svelte-meta-tags';
 	/** @type {import('./$types').PageData} */
 	export let data;
 	let infoClass = '0';
@@ -96,11 +95,6 @@
 		margin-left: 30px;
 	}
 
-	@font-face {
-		font-family: 'PoppinsLight';
-		src: url('/fonts/PoppinsLight.ttf') format('truetype');
-		font-display: swap;
-	}
 	#links {
 		width: 100%;
 		display: flex;
@@ -113,8 +107,8 @@
 		height: 80px;
 		display: flex;
 		width: 100%;
-		font-family: PoppinsLight;
-		font-display: swap;
+		font-family: 'Poppins', sans-serif;
+		font-weight: lighter;
 		align-items: center;
 		justify-content: space-between;
 	}
@@ -122,8 +116,8 @@
 		display: flex;
 		width: 100%;
 		height: 80px;
-		font-family: PoppinsLight;
-		font-display: swap;
+		font-family: 'Poppins', sans-serif;
+		font-weight: lighter;
 		align-items: center;
 		justify-content: space-between;
 		background-color: #181818;
@@ -138,7 +132,8 @@
 		padding-top: 5px;
 		padding-bottom: 5px;
 		font-size: large;
-		font-family: PoppinsLight;
+		font-family: 'Poppins', sans-serif;
+		font-weight: lighter;
 		font-display: swap;
 		border-radius: 6px;
 		text-align: center;
@@ -166,8 +161,8 @@
 		margin-left: 20px;
 		font-size: 40px;
 		line-height: normal;
-		font-family: PoppinsLight;
-		font-display: swap;
+		font-family: 'Poppins', sans-serif;
+		font-weight: lighter;
 		text-shadow: 3px 3px 4px rgba(0, 0, 0, 0.173);
 	}
 	#releaseData {

@@ -80,14 +80,7 @@
 		flex-direction: column;
 		align-items: center;
 	}
-	@font-face {
-		font-family: 'Poppins';
-		src: url('/fonts/PoppinsSemiBold.ttf') format('truetype');
-	}
-	@font-face {
-		font-family: 'PoppinsLight';
-		src: url('/fonts/PoppinsLight.ttf') format('truetype');
-	}
+
 	#links a {
 		margin-left: 10px;
 		margin-right: 10px;
@@ -117,8 +110,8 @@
 		border-style: solid;
 	}
 	section {
-		font-family: PoppinsLight;
-		font-display: swap;
+		font-family: 'Poppins', sans-serif;
+		font-weight: lighter;
 		color: #f3f3f3;
 		width: 30vw;
 		text-align: center;

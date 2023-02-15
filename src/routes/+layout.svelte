@@ -106,14 +106,6 @@
 		display: none;
 	}
 
-	@font-face {
-		font-family: 'Poppins';
-		src: url('/fonts/PoppinsSemiBold.ttf') format('truetype');
-	}
-	@font-face {
-		font-family: 'PoppinsLight';
-		src: url('/fonts/PoppinsLight.ttf') format('truetype');
-	}
 	footer {
 		width: 100vw;
 		height: 40px;
@@ -126,7 +118,8 @@
 		z-index: 10;
 	}
 	footer a {
-		font-family: PoppinsLight;
+		font-family: 'Poppins', sans-serif;
+		font-weight: lighter;
 		font-display: swap;
 		color: #f3f3f3;
 		font-size: small;
@@ -180,8 +173,9 @@
 		align-items: center;
 	}
 	nav a {
-		font-family: PoppinsLight;
-		font-display: swap;
+		font-family: 'Poppins', sans-serif;
+		font-weight: lighter;
+
 		text-decoration: none;
 		text-align: center;
 		display: flex;
@@ -202,7 +196,8 @@
 		}
 
 		nav p {
-			font-family: 'PoppinsLight';
+			font-family: 'Poppins', sans-serif;
+			font-weight: lighter;
 			color: #f3f3f3;
 			margin: 0px;
 			height: 70px;
